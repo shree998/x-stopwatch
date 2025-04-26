@@ -32,7 +32,7 @@ function App() {
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
-    return `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
   const handleStart = () => {
     startTimer();
@@ -51,7 +51,7 @@ function App() {
 
        <h1>Stopwatch</h1>
         <div className="stopwatch">
-          <div className="time">{formatTime(time)}</div>
+          <div className="time">Time: {formatTime(time)}</div>
           <div className="controls">
             { isRunning ? (<button onClick={handleStop} >Stop</button>): <button onClick={handleStart}>Start</button>}
             
