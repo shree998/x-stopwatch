@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+
        <h1>Stopwatch</h1>
         <div className="stopwatch">
           <div className="time">{formatTime(time)}</div>
@@ -59,7 +59,7 @@ function App() {
             <button onClick={handleReset} disabled={isReset}>Reset</button>
           </div>
         </div>
-      </header>
+
     </div>
   );
 }
